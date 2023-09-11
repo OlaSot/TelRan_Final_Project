@@ -1,0 +1,53 @@
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 30px;
+}
+
+.logo{
+    width: 200px;
+    height: 180px;
+    margin-right: 60px;
+}
+
+.btn_catalog{
+    background-image: url(/../front/public/mainPage/1x/button.png);
+    width: 320px;
+    height: 55px;
+    background-size: cover;
+    border: none;
+    color: #575959;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 590px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+.btn_catalog p {
+    margin-left: 12px;
+}
+
+.links{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-right: 170px;
+    text-decoration: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: medium;
+    font-size: 22px;
+}
+
+
+.container{
+    display: flex;
+}

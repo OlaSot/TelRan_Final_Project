@@ -1,0 +1,268 @@
+.sale_container{
+    margin-top: 30px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image{
+    background-image: url(/../front/public/mainPage/sale_block.png);
+    width: 1610px;
+    height: 618px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sale_container h1 {
+    color: white;
+    font-size: 156px;
+    text-transform: uppercase;
+    color: #737F49;
+    margin-top: -40px;
+    margin-left: 140px;
+
+}
+
+.sale_container h2{
+    margin-top: 120px;
+    margin-left: 140px;
+    color: white;
+    font-size: 97px;
+    text-transform: uppercase;
+    
+}
+
+.sale_btn{
+    margin-top: -55px;
+    margin-left: 90px;
+    color: #737F49;
+    font-size: 156px;
+    text-transform: uppercase;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: medium;
+    font-size: 22px;
+}
+
+.sale_container button{
+    width: 155px;
+    height: 80px;
+    border-radius: 13px;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+
+/*category*/
+.catalog_container{
+    margin: 40px 30px;
+    color: #575959;
+   
+}
+
+.btn_container{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+
+.btn_cat{
+    background-image: url(/../front/public/mainPage/1x/button.png);
+    width: 320px;
+    height: 55px;
+    background-size: cover;
+    border: none;
+    color: #575959;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 590px;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: -1.2px;
+}
+
+.category_link{
+    text-decoration: none;
+}
+
+.all_cat {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.catalog_container h2{
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+.cat_container p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    white-space: normal;
+}
+
+.cat_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.cat_container span{
+    display: block;
+}
+
+/* dwarf block */
+
+.dwarf_wrapper{
+    height: 630px;
+    width: 100%;
+    background-image: url(/../front/public/mainPage/5_percent.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    
+}
+
+.discount_descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount_descr  h1{
+    margin-top: 100px;
+    font-size: 152px;
+    color: #737F49;
+}
+
+.discount_descr h2{
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-size: 94px;
+    color: #AEBA7F;
+    letter-spacing: -3.5px;
+}
+
+
+.phone_num_inp{
+    width: 473px;
+    height: 75px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+   
+}
+
+.phone_num_inp::placeholder{
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 50px;
+    font-family:'Gaegu', cursive;
+}
+
+.discount_btn{
+    width: 473px;
+    height: 75px;
+    font-size: 50px;
+    font-weight: 800;
+    color: #575959;
+    font-family: 'Gaegu', cursive;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2.4px solid white;
+    border-radius: 15px;
+    border: 4px solid #D3D17D;
+}
+
+
+/* sale_container */
+.product_container{
+    width: 320px;
+    
+}
+
+.gen_sale_container{
+   margin: 50px 0 0 30px; 
+}
+
+.gen_sale_container h3{
+    color: #575959;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sale_container_cat{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.disc_img{
+    width: 320px;
+    height: 280px;
+    background-image: url('/../front/public/media/bridge.png');
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.new_price{
+    font-size: 30px;
+    font-weight: 600;
+    color: #575959;
+}
+
+.old_price{
+    color: #8B8B8B;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.discount{
+    color: #da3f3f;
+    font-weight: 600;
+}
+
+.price_wrapper {
+    
+    width: 250px;
+    margin: 0 auto; 
+    display: flex;
+   gap: 33px;
+    align-items: center;
+  }
+
+  .sale_desc{
+    width: 70%;
+    margin: 0 auto; 
+    color: #575959;
+  }
+
+
+
+
+
+

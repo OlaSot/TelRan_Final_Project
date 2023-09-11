@@ -1,0 +1,97 @@
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #575959;
+
+}
+
+.product_container{
+    margin: 100px 50px;
+}
+
+.prices{
+    font-size: 70px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    align-items: center;
+}
+
+.image{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.discount_price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9fa3a3;
+
+}
+
+.discount_price p:first-child{
+    font-size: 70px;
+    color: #575959;
+
+}
+
+.discount_price p:nth-child(2) {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.discount_price p:last-child{
+    font-size: 28px;
+    color: #da3f3f;
+    font-weight: 600;
+    
+}
+
+.button{
+    background-image: url(/../front/public/media/button.png);
+    width: 276px;
+    height: 53px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #575959;
+    cursor: pointer;
+    margin: 50px auto;
+
+}
+
+.description{
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: justify;
+    color: #575959;
+    
+}
+
+.right_side{
+    padding: 5%;
+}
+
+.description p:last-child{
+    margin-top: 20px;
+}
+
+.square{
+
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 4px solid #D3D17D;
+    border-radius: 20px;
+    
+  } 
