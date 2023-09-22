@@ -19,6 +19,7 @@ export default function MainPage() {
 
   console.log(first_four_products);
 
+  
   const theme = useSelector(state => state.theme.value);
 
 

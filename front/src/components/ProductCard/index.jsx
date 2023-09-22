@@ -1,28 +1,45 @@
-import React from 'react'
-import s from './index.module.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import s from "./index.module.css";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCartAction } from "../../store/reducers/cartReducer";
 
-export default function ProductCard({ id, title, image, price, discont_price, productsStyle }) {
+export default function ProductCard({id,title,image,price,discont_price,productsStyle}){
+
+
+  const dispatch = useDispatch()
 
   const saleCalculation = (price, discont_price) => {
     if (discont_price === null) {
-      return 0
+      return 0;
     }
-    return Math.floor((price - discont_price) / price * 100)
-  }
+    return Math.floor(((price - discont_price) / price) * 100);
+  };
 
-  const sale = saleCalculation(price, discont_price)
+  const sale = saleCalculation(price, discont_price);
+
+  const product = {id, title, image, price, discont_price, productsStyle}
+  
 
 
   return (
     <div className={s.container}>
-      <Link to={`/products/${id}`}>
-        <div key={id} className={s.img} style={{ backgroundImage: `url(http://localhost:3333${image})`, backgroundSize: 'cover' }}>
-          <div className={s.square} />
-        </div>
-        {/* <img src={`http://localhost:3333${image}`} alt="" /> */}
-      </Link>
-
+      <div>
+        <Link to={`/products/${id}`}>
+          <div
+            key={id}
+            className={s.img}
+            style={{
+              backgroundImage: `url(http://localhost:3333${image})`,
+              backgroundSize: "cover",
+            }}
+          >
+            <div className={s.square} />
+          </div>
+          {/* <img src={`http://localhost:3333${image}`} alt="" /> */}
+        </Link>
+        <div className={s.add_btn} onClick={() => dispatch(addToCartAction(product))}>Add to cart</div>
+      </div>
 
       {productsStyle ? (
         <div className={s.mainPage}>
@@ -32,13 +49,13 @@ export default function ProductCard({ id, title, image, price, discont_price, pr
             <p className={s.discount}>-{sale}%</p>
           </div>
           <p className={s.sale_desc}>{title}</p>
-        </div>) : (
+        </div>
+      ) : (
         <div className={s.allProductsPage}>
           <p>{title}</p>
           <p>{price}</p>
-        </div>)
-      }
-
+        </div>
+      )}
     </div>
-  )
+  );
 }

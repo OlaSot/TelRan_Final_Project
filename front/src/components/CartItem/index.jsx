@@ -5,9 +5,9 @@ import { decrementCountAction, deleteFromCartAction, incrementCountAction } from
 
 export default function CartItem({ id, title, price, count, image, description }) {
 
-    const descr = description.split(' ')
-    const first_words = descr.slice(0, 20)
-    const new_description = first_words.join(' ')
+    const descr = description?.split(' ')
+    const first_words = descr ? descr.slice(0, 20) : ''
+    const new_description = first_words ? first_words.join(' ') : ''
     const dispatch = useDispatch()
 
     return (
