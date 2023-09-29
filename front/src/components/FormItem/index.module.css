@@ -1,0 +1,11 @@
+form{
+    position: relative;
+}
+
+.req_text{
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    
+}
+

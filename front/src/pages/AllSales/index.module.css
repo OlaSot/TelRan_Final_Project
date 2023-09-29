@@ -1,3 +1,9 @@
+.container{
+    margin: 100px auto;
+    width: 80%;
+    max-width: 1920px;
+}
+
 .sort_container{
     margin: 80px 0 45px 0;
     display: flex;

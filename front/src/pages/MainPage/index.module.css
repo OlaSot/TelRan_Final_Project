@@ -202,22 +202,8 @@
 }
 
 
-.phone_num_inp {
-    width: 473px;
-    height: 75px;
-    border: none;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    margin-top: 10px;
 
-}
 
-.phone_num_inp::placeholder {
-    font-size: 25px;
-    font-weight: 600;
-    padding-left: 50px;
-    font-family: 'Gaegu', cursive;
-}
 
 
 /* sale_container */

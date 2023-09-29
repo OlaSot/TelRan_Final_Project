@@ -17,13 +17,15 @@ export default function FilterForm() {
   };
 
   const handleMinValueChange = (e) => {
-    const value = +e.target.value || 0;
+    let value = +e.target.value || 0;
+    if(value < 0) value = 0;
     setMinValue(value);
     handleChange(value, maxValue);
   };
 
   const handleMaxValueChange = (e) => {
-    const value = +e.target.value || Infinity;
+    let value = +e.target.value || Infinity;
+    if(value < 0) value = 0;
     setMaxValue(value);
     handleChange(minValue, value);
   };
@@ -41,18 +43,10 @@ export default function FilterForm() {
       <input
         type="number"
         placeholder="to"
-        value={maxValue === Infinity ? "" : maxValue}
+        value={maxValue === Infinity || maxValue === 0 ? "" : maxValue}
         onChange={handleMaxValueChange}
       />
     </form>
   );
 }
-
-
-
-
-
-
-
-
 

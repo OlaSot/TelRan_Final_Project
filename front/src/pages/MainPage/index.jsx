@@ -54,14 +54,13 @@ export default function MainPage() {
       </div>
 
       <div className={s.dwarf_wrapper}>
-        {/* <img src="/mainPage/5_percent.png" alt="" className={s.percent_img}/> */}
-        <FormItem text={btn_text} btn_style={'main_page_btn'} input_style={'input_main_page'}/>
-        {/* <div className={s.discount_descr}>
+        <img src="/mainPage/5_percent.png" alt="" className={s.percent_img}/>
+        
+        <div className={s.discount_descr}>
           <h1>5% off</h1>
           <h2>on the first order</h2>
-          <input type="text" className={s.phone_num_inp} placeholder="+49" />
-          <button className={s.discount_btn}>Get a discount</button>
-        </div> */}
+          <FormItem text={btn_text} btn_style={'main_page_btn'} input_style={'input_main_page'}/>
+        </div>
       </div>
 
       <div className={s.gen_sale_container}>

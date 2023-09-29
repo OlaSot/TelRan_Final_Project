@@ -28,3 +28,41 @@ export const getOneProduct = (id) => {
         .then(json => {dispatch(loadOneProductAction(json[0]))})
     }
 }
+
+
+
+
+
+    
+    export  function createPhoneNumber(obj){
+        fetch('http://localhost:3333/sale/send', {
+            method: 'POST',
+            body: JSON.stringify(obj),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        })
+        .then(function(res){
+            return res.json()
+        })
+        .then(function(json){
+            console.log(json);
+        })
+    }
+
+
+    export  function createAnOrder(obj){
+        fetch('http://localhost:3333/order/send', {
+            method: 'POST',
+            body: JSON.stringify(obj),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        })
+        .then(function(res){
+            return res.json()
+        })
+        .then(function(json){
+            console.log(json);
+        })
+    }

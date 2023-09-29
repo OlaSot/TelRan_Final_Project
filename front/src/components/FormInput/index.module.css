@@ -5,9 +5,21 @@
     border-radius: 15px;
     margin-bottom: 30px;
     margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 50px;
+    font-family: 'Gaegu', cursive;
 
 }
+
+.input_main_page::placeholder {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Gaegu', cursive;
+}
+
 
 .input_cart_page{
 
 }
+

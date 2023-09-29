@@ -17,7 +17,8 @@ export default function AllSales() {
   // console.log(allSalesProducts);
 
   return (
-    <div>
+    <div className={s.container}>
+      <h1>Sale</h1>
       <div className={s.sort_container}>
         <FilterForm />
         <SortForm />

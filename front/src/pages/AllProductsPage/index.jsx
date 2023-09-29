@@ -22,12 +22,13 @@ export default function AllProductsPage() {
 
   return (
     <div className={s.container}>
+      <h1>All products</h1>
       <div className={s.sort_container}>
         <FilterForm />
         <DiscountForm />
         <SortForm />
       </div>
-      <h1>Name</h1>
+      
       <ProductsContainer products={allProducts} />
     </div>
   );
