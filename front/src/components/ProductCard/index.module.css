@@ -53,9 +53,9 @@
 .price_wrapper {
     
     width: 250px;
-    margin: 0 auto; 
+    margin:  auto; 
     display: flex;
-   gap: 33px;
+    gap: 33px;
     align-items: center;
   }
 
@@ -85,4 +85,31 @@
   .container:hover .add_btn{
     opacity: 1;
     transition: 0.3;
+  }
+
+  .price_container{
+    margin-top: 10px;
+  }
+
+
+  @media(max-width: 1080px){
+
+    .img{
+      height: 180px;
+      width:180px;
+      
+  }
+    .square{
+      width: 200px;
+      height: 200px;
+    }
+
+    .price_wrapper{
+      width: 100px;
+      font-size: 15px;
+    }
+
+    .new_price{
+      font-size: 20px;
+    }
   }

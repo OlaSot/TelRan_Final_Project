@@ -1,52 +1,38 @@
-import React, { useEffect } from 'react'
-import s from './index.module.css'
-import { useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { getProductsByCategory } from '../../requests/products_req'
-import ProductsContainer from '../../components/ProductsContainer'
+import React, { useEffect } from "react";
+import s from "./index.module.css";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductsByCategory } from "../../requests/products_req";
+import ProductsContainer from "../../components/ProductsContainer";
+import FilterForm from "../../components/FilterForms/FilterForm";
+import DiscountForm from "../../components/FilterForms/DiscountForm";
+import SortForm from "../../components/FilterForms/SortForm";
 
 export default function ProductsByCategoriesPage() {
+  const { id } = useParams();
 
-  const {id} = useParams()
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
+  useEffect(() => dispatch(getProductsByCategory(id)), [dispatch, id]);
 
-  useEffect(() => dispatch(getProductsByCategory(id)),[dispatch,id])
+  const products_by_category = useSelector((state) => state.productsByCategory);
 
-  const products_by_category = useSelector(state => state.productsByCategory)
+  // console.log(products_by_category);
 
-  console.log(products_by_category)
-  
-  const products = products_by_category.data
- 
-  const category_title = products_by_category.category
-
+  const products = products_by_category?.data || [];
+  // const new_products = products.map(el => ({...el, show_product: true }));
+  // console.log(new_products)
+  const category_title = products_by_category.category;
+  console.log('Продукты массив',products);
   return (
     <div className={s.container}>
       <h1>{category_title?.title}</h1>
       <div className={s.sort_container}>
-      <div className={s.price}>
-        <p className={s.title}>Price</p>
-        <input type="text" placeholder='from' />
-        <input type="text" placeholder='to' />
+        <FilterForm />
+        <DiscountForm />
+        <SortForm />
       </div>
-
-      <div className={s.discount}>
-        <p className={s.title}>Discounted items</p>
-        <input type="checkbox" />
-      </div>
-
-      <div className={s.sorted}>
-        <p className={s.title}>Sorted</p>
-        <select name="" id="">
-          <option value="" selected>default</option>
-        </select>
-      </div>
-      </div>
-
-    <ProductsContainer products={products}/>
-    
+      <ProductsContainer products={products} />
     </div>
-  )
+  );
 }
-

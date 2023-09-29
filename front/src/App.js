@@ -22,11 +22,10 @@ function App() {
 
   useEffect(() => dispatch(getAllCategories), [])
 
-  const theme = useSelector(state => state.theme.value);
-console.log(theme);
+
 
   return (
-    <div className={theme === 'dark' ? 'dark_theme' : ''} >
+    <div>
       <NavMenu />
       <Routes>
         <Route path='/' element={<MainPage />} />

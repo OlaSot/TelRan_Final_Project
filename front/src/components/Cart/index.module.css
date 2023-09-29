@@ -1,0 +1,12 @@
+.container{
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container p{
+    font-size: 22px;
+}

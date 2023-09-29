@@ -5,3 +5,24 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 36px;
 }
+
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1920px;
+}
+
+@media(max-width: 1080px) {
+    .main_container{
+        width: 90%;
+    }
+
+    .all_categories{
+        margin-top: 20px;
+    }
+
+
+}

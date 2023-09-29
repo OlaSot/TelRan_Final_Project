@@ -8,7 +8,9 @@ export const getProductsByCategory = (id) => {
     return dispatch => {
         fetch(`http://localhost:3333/categories/${id}`)
         .then(res => res.json())
-        .then(json => dispatch(loadProductsByCategory(json)))
+        .then(json => {
+            console.log(json);
+            dispatch(loadProductsByCategory(json))})
     }
 }
 

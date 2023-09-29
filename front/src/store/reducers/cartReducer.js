@@ -4,6 +4,10 @@ const INCREMENT_COUNT = 'INCREMENT_COUNT';
 const DECREMENT_COUNT = 'DECREMENT_COUNT';
 const CLEAR_CART = 'CLEAR_CART';
 
+
+let defaultState = JSON.parse(localStorage.getItem('prod_in_Cart')) ?? []
+console.log(defaultState);
+
 export const addToCartAction = payload => ({type: ADD_TO_CART, payload})
 export const deleteFromCartAction = payload => ({ type: DELETE_FROM_CART, payload });
 export const incrementCountAction = payload => ({ type: INCREMENT_COUNT, payload });
@@ -18,10 +22,10 @@ const checkProduct = (state, payload) => {
             productInCart.count++
             return [...state]
         }
-    
 }
 
-export const cartReducer = (state=[], action) => {
+
+export const cartReducer = (state=defaultState, action) => {
     if(action.type === ADD_TO_CART){
         return checkProduct(state, action.payload)
       } else if (action.type === DELETE_FROM_CART) {

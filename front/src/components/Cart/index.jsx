@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem'
 import { clearCartAction } from '../../store/reducers/cartReducer'
@@ -10,9 +10,13 @@ export default function Cart() {
     const dispatch = useDispatch()
     const total = cart_state.reduce((acc, { price, count }) => acc + price * count, 0);
 
+    useEffect(() => {
+        localStorage.setItem('prod_in_Cart', JSON.stringify(cart_state))
+    }, [cart_state])
+
     return (
-        <div>
-            <p>Cart:</p>
+        <div className={s.container}>
+            <h1>Cart:</h1>
             <div>
                 {
                     cart_state.map(el => <CartItem key={el.id} {...el} />)

@@ -13,6 +13,8 @@ export default function CategoriesContainer({limit}) {
   return (
     
     <div className={s.all_categories}>
+
+      
       {
         displayed_categories.map(el => <Category key={el.id} {...el}/>)
       }

@@ -47,3 +47,18 @@
   .category:hover .square{
     opacity: 1;
   }
+
+
+  @media(max-width: 1080px){
+
+    .img{
+      height: 180px;
+      width:180px;
+      
+  }
+    .square{
+      width: 200px;
+      height: 200px;
+    }
+
+  }

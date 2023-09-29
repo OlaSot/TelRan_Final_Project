@@ -16,6 +16,7 @@ export default function ProductCard({id,title,image,price,discont_price,products
     return Math.floor(((price - discont_price) / price) * 100);
   };
 
+
   const sale = saleCalculation(price, discont_price);
 
   const product = {id, title, image, price, discont_price, productsStyle}
@@ -36,13 +37,12 @@ export default function ProductCard({id,title,image,price,discont_price,products
           >
             <div className={s.square} />
           </div>
-          {/* <img src={`http://localhost:3333${image}`} alt="" /> */}
         </Link>
         <div className={s.add_btn} onClick={() => dispatch(addToCartAction(product))}>Add to cart</div>
       </div>
 
       {productsStyle ? (
-        <div className={s.mainPage}>
+        <div className={s.price_container}>
           <div className={s.price_wrapper}>
             <p className={s.new_price}>{discont_price}$</p>
             <p className={s.old_price}>{price}$</p>
@@ -51,9 +51,11 @@ export default function ProductCard({id,title,image,price,discont_price,products
           <p className={s.sale_desc}>{title}</p>
         </div>
       ) : (
-        <div className={s.allProductsPage}>
+        <div className={s.price_container}>
           <p>{title}</p>
-          <p>{price}</p>
+          {<p>{price}$</p>}
+          {discont_price ? <p>{discont_price}$</p> : null}
+          {discont_price ? <p>-{sale}%</p> : null}
         </div>
       )}
     </div>

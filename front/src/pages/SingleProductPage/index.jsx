@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from 'react-redux'
 import { useParams } from 'react-router-dom'
 import SingleProductItem from '../../components/SingleProductItem'
 import { getOneProduct } from '../../requests/products_req'
+import s from './index.module.css'
+
 
 export default function SingleProductPage() {
 
@@ -16,7 +18,7 @@ export default function SingleProductPage() {
   const single_product = useSelector(state => state.singleProduct)
 
   return (
-    <div>
+    <div className={s.container}>
       <SingleProductItem single_product={single_product}/>
     </div>
   )
