@@ -18,3 +18,10 @@ body{
 body .dark_theme{
   background-image: url(../public/darkTheme/darkBG.png);
 }
+
+a{
+
+    text-decoration: none;
+
+
+}

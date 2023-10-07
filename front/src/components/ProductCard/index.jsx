@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 
-export default function ProductCard({id,title,image,price,discont_price,productsStyle}){
-
-
-  const dispatch = useDispatch()
+export default function ProductCard({
+  id,
+  title,
+  image,
+  price,
+  discont_price,
+  productsStyle,
+}) {
+  const dispatch = useDispatch();
 
   const saleCalculation = (price, discont_price) => {
     if (discont_price === null) {
@@ -16,12 +21,9 @@ export default function ProductCard({id,title,image,price,discont_price,products
     return Math.floor(((price - discont_price) / price) * 100);
   };
 
-
   const sale = saleCalculation(price, discont_price);
 
-  const product = {id, title, image, price, discont_price, productsStyle}
-  
-
+  const product = { id, title, image, price, discont_price, productsStyle };
 
   return (
     <div className={s.container}>
@@ -38,26 +40,28 @@ export default function ProductCard({id,title,image,price,discont_price,products
             <div className={s.square} />
           </div>
         </Link>
-        <div className={s.add_btn} onClick={() => dispatch(addToCartAction(product))}>Add to cart</div>
+        <div
+          className={s.add_btn}
+          onClick={() => dispatch(addToCartAction(product))}
+        >
+          Add to cart
+        </div>
       </div>
 
-      {productsStyle ? (
-        <div className={s.price_container}>
-          <div className={s.price_wrapper}>
-            <p className={s.new_price}>{discont_price}$</p>
+      <div className={s.price_container}>
+        <p className={s.sale_desc}>{title}</p>
+        <div className={s.price_wrapper}>
+          {discont_price ? (
+            <>
             <p className={s.old_price}>{price}$</p>
+            <p className={s.new_price}>{discont_price}$</p>
             <p className={s.discount}>-{sale}%</p>
-          </div>
-          <p className={s.sale_desc}>{title}</p>
+            </>
+          ) : (
+            <p className={s.new_price}>{price}$</p>
+          )}
         </div>
-      ) : (
-        <div className={s.price_container}>
-          <p>{title}</p>
-          {<p>{price}$</p>}
-          {discont_price ? <p>{discont_price}$</p> : null}
-          {discont_price ? <p>-{sale}%</p> : null}
-        </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { addToCartAction } from "../../store/reducers/cartReducer";
 
 export default function SingleProductItem({ single_product }) {
-  const { id, title, price, description, image, discont_price } =
+  const { title, price, description, image, discont_price } =
     single_product;
 
   const dispatch = useDispatch();

@@ -9,7 +9,7 @@
 .product_container{
     margin: 50px auto;
     width: 80%;
-    max-width: 1920px;
+    max-width: 1600px;
 }
 
 .prices{
@@ -121,3 +121,88 @@
     border-radius: 20px;
     
   } 
+
+  @media(max-width: 900px) {
+
+    .product_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%; /* Увеличим ширину контейнера, чтобы использовать больше пространства экрана */
+    }
+
+    .title{
+        font-size: 24px; /* Уменьшим размер заголовка */
+        margin-top: 15px; /* Уменьшим верхний отступ заголовка */
+        margin-bottom: 40px;
+    }
+
+    .container {
+        flex-direction: column; /* Переключим направление флекса на колонку, чтобы контент шел сверху вниз */
+        height: auto; /* Уберем жесткую высоту */
+        align-items: center; /* Выравнивание по начальной линии */
+    }
+
+    .square {
+        margin-bottom: 20px; /* Добавим нижний отступ для картинки */
+    }
+
+    .image {
+        width: 400px; /* Уменьшим размер изображения */
+        height: 400px;
+    }
+
+    .prices {
+        font-size: 50px; /* Уменьшим размер шрифта цены */
+    }
+
+    .discount_price p:first-child{
+        font-size: 50px; /* Уменьшим размер шрифта для скидочной цены */
+    }
+
+    .discount_price p:nth-child(2) {
+        font-size: 16px; /* Уменьшим размер шрифта для обычной цены */
+    }
+
+    .discount_price p:last-child{
+        font-size: 22px; /* Уменьшим размер шрифта для процентов скидки */
+    }
+
+    .button {
+        width: 200px; /* Уменьшим размер кнопки */
+        height: 40px;
+        margin: 30px auto; /* Уменьшим отступы кнопки */
+        font-size: 24px; /* Уменьшим размер шрифта в кнопке */
+    }
+
+    .button_img {
+        width: 180px; /* Уменьшим размер изображения в кнопке */
+        height: 32px;
+    }
+
+    .button:hover .button_img {
+        width: 220px;
+        height: 40px;
+    }
+
+    .description{
+        font-size: 18px; /* Уменьшим размер шрифта описания */
+        margin-top: 30px; /* Уменьшим верхний отступ описания */
+    }
+
+    .right_side {
+        padding: 3%; /* Уменьшим отступы справа */
+    }
+
+    .description p:last-child{
+        margin-top: 15px; /* Уменьшим верхний отступ последнего параграфа в описании */
+    }
+
+}
+
+@media(max-width: 600px) {
+    .image{
+        width: 300px; /* Уменьшим размер изображения */
+        height: 300px;
+    }
+}

@@ -3,7 +3,8 @@
     color: #575959;
     margin: 50px auto;
     width: 80%;
-    max-width: 1920px;
+    max-width: 1600px;
+
 }
 
 .text_container{
@@ -11,10 +12,7 @@
     justify-content: space-between;
 }
 
-h1{
-    font-size: 40px;
-    font-weight: 700;
-}
+
 
 .number{
     margin-top: 25px;
@@ -78,4 +76,64 @@ h1{
     color: black;
     font-weight: medium;
     
+}
+
+@media(max-width: 900px){
+    .number{
+        margin-top: 25px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+    .strasse{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    h1{
+        font-size: 30px;
+    }
+
+    .map{
+        display: none;
+    }
+
+}
+@media(max-width: 600px) {
+    .wrapper {
+        width: 95%; /* Увеличим ширину контейнера на мобильных экранах для лучшего использования пространства */
+    }
+
+    .text_container {
+        justify-content: space-evenly; /* Распределим контент равномерно */
+    }
+
+    .contact_container, .address {
+        width: 45%; /* Установим ширину блоков, чтобы они были немного узче */
+    }
+
+    .number, .strasse, h1 {
+        font-size: 24px; /* Уменьшим размер шрифта для номера, адреса и заголовка */
+    }
+
+    .hours {
+        font-size: 16px; /* Уменьшим размер шрифта для рабочих часов */
+    }
+
+    .duration {
+        font-size: 18px; /* Уменьшим размер шрифта для продолжительности работы */
+    }
+
+    .content_cont img {
+        width: 50px; /* Уменьшим размер иконок социальных сетей */
+        height: 42px;
+    }
+
+    .social_media_content {
+        gap: 20px; /* Уменьшим промежуток между иконками социальных сетей */
+    }
+
+    .content_cont p {
+        font-size: 13px; /* Уменьшим размер шрифта под иконками социальных сетей */
+    }
 }

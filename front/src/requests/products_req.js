@@ -34,7 +34,7 @@ export const getOneProduct = (id) => {
 
 
     
-    export  function createPhoneNumber(obj){
+    export  function getSale(obj){
         fetch('http://localhost:3333/sale/send', {
             method: 'POST',
             body: JSON.stringify(obj),
@@ -51,7 +51,7 @@ export const getOneProduct = (id) => {
     }
 
 
-    export  function createAnOrder(obj){
+    export  function sendOrder(obj){
         fetch('http://localhost:3333/order/send', {
             method: 'POST',
             body: JSON.stringify(obj),

@@ -27,7 +27,8 @@ export const allProductsReducer = (state = [], action) => {
     } else if(action.type === FILTER_PRODUCTS){
         const {minValue, maxValue} = action.payload
         return state.map(el => {
-            if(el.price >= minValue && el.price <= maxValue){
+            let actualPrice = el.discont_price || el.price;
+            if(actualPrice >= minValue && actualPrice <= maxValue){
                 el.show_product = true
             } else {
                 el.show_product = false

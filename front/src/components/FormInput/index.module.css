@@ -20,6 +20,26 @@
 
 
 .input_cart_page{
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 10px;
+    font-family: 'Gaegu', cursive;
+    border: 4px solid #D3D17D;
 
 }
+
+@media(max-width: 600px){
+    .input_main_page{
+        width: 400px;
+        height: 60px;
+        font-size: 30px;
+    }
+}
+
 

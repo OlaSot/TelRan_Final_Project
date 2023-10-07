@@ -17,16 +17,28 @@ export default function ProductsByCategoriesPage() {
 
   const products_by_category = useSelector((state) => state.productsByCategory);
 
-  // console.log(products_by_category);
+  console.log(products_by_category);
 
   const products = products_by_category?.data || [];
+  
   // const new_products = products.map(el => ({...el, show_product: true }));
   // console.log(new_products)
   const category_title = products_by_category.category;
-  console.log('Продукты массив',products);
+  // console.log('Продукты массив',products);
   return (
     <div className={s.container}>
-      <h1>{category_title?.title}</h1>
+      <div className={s.title_block}>
+        <h1>{category_title?.title}</h1> 
+        <img src="/media/filter.svg" alt="" />
+      </div>
+      <div className={s.filter_mobile}>
+        <p>
+          <span>x</span>
+        </p>
+        <FilterForm />
+        <DiscountForm />
+        <SortForm />
+      </div>
       <div className={s.sort_container}>
         <FilterForm />
         <DiscountForm />

@@ -3,12 +3,12 @@ import s from './index.module.css'
 import { useDispatch } from 'react-redux'
 import { decrementCountAction, deleteFromCartAction, incrementCountAction } from '../../store/reducers/cartReducer'
 
-export default function CartItem({ id, title, price, count, image, description }) {
+export default function CartItem({ id, title, price, count, image, description, discont_price }) {
 
-    const descr = description?.split(' ')
-    const first_words = descr ? descr.slice(0, 20) : ''
-    const new_description = first_words ? first_words.join(' ') : ''
+
     const dispatch = useDispatch()
+
+    const currentPrice = (discont_price ?? price)
 
     return (
         <div className={s.container}>
@@ -16,7 +16,7 @@ export default function CartItem({ id, title, price, count, image, description }
                 <img src={`http://localhost:3333${image}`} alt="" className={s.img} />
                 <div className={s.text_block}>
                     <p>{title}</p>
-                    <p>{new_description}</p>
+                    
                 </div>
                 <div className={s.btns_container}>
                     <button onClick={() => dispatch(decrementCountAction(id))}>-</button>

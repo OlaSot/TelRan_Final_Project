@@ -10,9 +10,10 @@ import NavMenu from './components/NavMenu';
 import Footer from './components/Footer';
 import SingleProductPage from './pages/SingleProductPage';
 import AllSales from './pages/AllSales';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 import { getAllCategories } from './requests/categories_req';
+import NavMenuBottom from './components/NavMenuBottom';
 
 
 
@@ -20,7 +21,7 @@ function App() {
 
   const dispatch = useDispatch()
 
-  useEffect(() => dispatch(getAllCategories), [])
+  useEffect(() => dispatch(getAllCategories), [dispatch])
 
 
 
@@ -32,12 +33,14 @@ function App() {
         <Route path='/categories' element={<AllCategoriesPage />} />
         <Route path='/products' element={<AllProductsPage />} />
         <Route path='/cart' element={<CartPage />} />
-        <Route path='/sales' element={<AllSales />}/>
+        <Route path='/sales' element={<AllSales />} />
         <Route path='/categories/:id' element={<ProductsByCategoriesPage />} />
         <Route path='/products/:id' element={<SingleProductPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
+
       <Footer />
+      <NavMenuBottom />
     </div>
   );
 }

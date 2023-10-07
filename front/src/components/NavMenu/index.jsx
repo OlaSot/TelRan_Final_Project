@@ -2,22 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import s from "./index.module.css";
 
+import Btn from "../Btn";
+
 
 export default function NavMenu() {
 
   return (
     <div className={`${s.main_container} `}>
+
       <Link to='/'><img src="/mainpage/logo.png" alt="logo" className={s.logo} /></Link>
       {/* <button onClick={() => dispatch(changeThemeAction())}>Click</button> */}
       <div className={s.container}>
-        <Link to="/categories" className={s.links}>
-          <div
-            className={`${s.btn_catalog} `}
-          >
-            <img src={'/mainPage/1x/button.png'} className={s.image}/>
-            <p>Catalog</p>
-          </div>
-        </Link>
+      <Link to="/categories"><Btn>Catalog</Btn></Link>
+        
         <div className={`${s.links} `}>
           <Link to="/">Main Page</Link>
           <Link to="/products">All products</Link>

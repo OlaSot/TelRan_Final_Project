@@ -15,9 +15,6 @@ export default function AllProductsPage() {
   }, [dispatch]);
 
   const allProducts = useSelector((state) => state.allProducts);
-
-  
-
   console.log(allProducts);
 
   return (
@@ -28,7 +25,6 @@ export default function AllProductsPage() {
         <DiscountForm />
         <SortForm />
       </div>
-      
       <ProductsContainer products={allProducts} />
     </div>
   );

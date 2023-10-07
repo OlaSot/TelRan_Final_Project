@@ -1,12 +1,50 @@
 .container{
     margin: 20px auto;
     width: 80%;
-    max-width: 1920px;
+    max-width: 1600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: white;
+    
 }
 
 .container p{
     font-size: 22px;
+}
+
+.both_sides{
+    display: flex;
+    width: 100%;
+}
+
+
+
+.right_side{
+    margin-top: 30px;
+    width: 30%;
+   
+}
+
+
+
+.clear_btn img{
+    width: 30px;
+    height: 50px;
+}
+
+.upper_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right_side_container{
+    
+    border: 2px rgb(171, 193, 138) solid;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
 }

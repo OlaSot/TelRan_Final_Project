@@ -1,138 +1,13 @@
-.sale_container {
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1920px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.image_sale_block {
-    width: 1610px;
-    height: 618px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.links {
-    text-decoration: none;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-
-}
-
-.sale_container h1 {
-    color: white;
-    font-size: 156px;
-    text-transform: uppercase;
-    color: #737F49;
-    margin-top: -40px;
-    margin-left: 140px;
-
-
-}
-
-.sale_container h2 {
-    margin-top: 120px;
-    margin-left: 140px;
-    color: white;
-    font-size: 97px;
-    text-transform: uppercase;
-
-}
-
-.sale_btn {
-    margin-top: -55px;
-    margin-left: 90px;
-    color: #737F49;
-    font-size: 156px;
-    text-transform: uppercase;
-    
-
-}
-
-
-.sale_container button {
-    width: 155px;
-    height: 80px;
-    border-radius: 13px;
-    border: none;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 60px;
-}
-
-
-
-
 
 /*category*/
 .catalog_container {
     color: #575959;
     margin: 50px auto;
     width: 80%;
-    max-width: 1920px;
+    max-width: 1600px;
 
 }
 
-.btn_container {
-    display: flex;
-    gap: 67px;
-    padding-bottom: 30px;
-
-
-}
-
-.btn_cat {
-    width: 320px;
-    height: 55px;
-    background-size: cover;
-    border: none;
-    color: #575959;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 590px;
-    font-weight: bold;
-    font-size: 28px;
-    position: relative;
-    letter-spacing: -1.2px;
-}
-
-.btn_image {
-    width: 246px;
-    height: 42px;
-    object-fit: contain;
-    height: 100%;
-    position: absolute;
-}
-
-.btn_cat:hover .btn_image {
-    width: 300px;
-    height: 51px;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-}
-
-.btn_cat p {
-    margin-left: 12px;
-    z-index: 1;
-}
-
-
-.category_link {
-    text-decoration: none;
-}
 
 .all_cat {
     display: grid;
@@ -161,52 +36,14 @@
     display: block;
 }
 
-/* dwarf block */
 
-.dwarf_wrapper {
-    height: 600px;
-    width: 100%;
-    margin: 0 auto;
+
+.main_banner_wrapper{
     display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.percent_img{
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    object-position: center center;
-}
-
-.discount_descr {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    z-index: 1;
+    justify-content: center;
 }
 
-.discount_descr h1 {
-    margin-top: 100px;
-    font-size: 152px;
-    color: #737F49;
-}
-
-.discount_descr h2 {
-    margin-top: -20px;
-    text-transform: uppercase;
-    font-size: 94px;
-    color: #AEBA7F;
-    letter-spacing: -3.5px;
-}
-
-
-
-
-
-
-/* sale_container */
 .product_container {
     width: 320px;
 
@@ -216,15 +53,11 @@
     color: #575959;
     margin: 50px auto;
     width: 80%;
-    max-width: 1920px;
+    max-width: 1600px;
 }
 
 
 
-.sale_container_cat {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
 
 .disc_img {
     width: 320px;
@@ -273,89 +106,93 @@
     margin-bottom: 20px;
 }
 
-@media(max-width: 1080px) {
+.btn_container {
+    display: flex;
+    gap: 67px;
+    padding-bottom: 30px;
 
-    .sale_container {
-        margin-top: -120px;
+
+}
+
+
+
+.block_name {
+    color: #575959;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+@media(max-width: 900px) {
+    .main_container {
+        display: flex;
+        flex-direction: column;
+    }
+    .catalog_container{
+        display: none;
     }
 
-    .image_sale {
-        width: 878px;
 
+    .gen_sale_container{
+        order: 1;
     }
 
-    .sale_container h1 {
-        font-size: 90px;
-        margin-bottom: 15px;
+    .sale_banner{
+        order: 2;
     }
 
-    .sale_container h2 {
-        font-size: 60px;
-        margin-bottom: 10px;
+
+}
+@media(max-width: 600px) {
+
+
+
+
+
+    /* Adjust product_container for smaller devices */
+    .product_container {
+        width: 100%;
     }
 
-    .sale_btn {
-        font-size: 90px;
+    /* Adjust general sale container width */
+    .gen_sale_container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 0 10px;
     }
 
-    
-
-    .text {
-        margin-top: 80px;
-        margin-left: -40px;
-    }
-    .block_name{
-        font-size: 30px;
-        
+    /* Adjust the image dimensions for discounts */
+    .disc_img {
+        width: 100%;
+        height: auto;
     }
 
-    .btn_cat{
-        
-        width: 190px;
-        height: 37.5px;
+    /* Adjust the font sizes to be smaller and more readable on small screens */
+    .new_price, .old_price, .discount {
         font-size: 20px;
     }
 
-    .btn_cat .btn_image{
-        width: 174px;
-        height: 42px;
-    }
-
-    .btn_cat:hover .btn_image{
-        width: 215px;
-        height: 37px;
-
-    }
-    
-    .btn_container{
-        gap: 0;
-    }
- 
-    .dwarf_wrapper{
-        height: 300px;
-    }
-
-    .discount_descr h1 {
-        font-size: 85px;
-        margin-top: 30px;
-    }
-
-    .discount_descr h2{
-        font-size: 55px;
-    }
-
-    .phone_num_inp{
-        width: 450px;
-        padding: 14px;
-        border-radius: 5px;
+    /* Adjust block name font size */
+    .block_name {
+        font-size: 24px;
         margin-bottom: 10px;
     }
 
-    .discount_btn{
-        width: 450px;
-        border-radius: 5px;
-        height: 70px;
-        font-size: 35px;
+    /* Reduce gap in btn_container for space efficiency */
+    .btn_container {
+        gap: 20px;
     }
-    
+
+    /* Adjust the sale description width */
+    .sale_desc {
+        width: 90%;
+    }
+
+    /* Adjust the price_wrapper for smaller screens */
+    .price_wrapper {
+        width: 90%;
+        gap: 10px;
+    }
 }

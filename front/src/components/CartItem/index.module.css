@@ -6,38 +6,26 @@
 }
 
 .left_side{
-    width: 60%;
-    display: flex;
-    align-items: start;
-    gap: 50px;
-   
-  
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center; /* выравнивание элементов по горизонтали по центру */
+    align-items: center;
 }
 
 .container{
     display: flex;
     background-color: white;
     border-radius: 20px;
-    margin: 30px 100px;
+    margin-right: 40px;
     padding: 20px;
     
 }
 
-.text_block{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
 
-.text_block p:first-child{
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
 
-.text_block p:last-child{
-    text-align: justify;
-}
+
 
 .btns_container{
     display: flex;
