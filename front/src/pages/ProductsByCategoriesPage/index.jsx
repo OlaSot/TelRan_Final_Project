@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./index.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,6 +15,12 @@ export default function ProductsByCategoriesPage() {
 
   useEffect(() => dispatch(getProductsByCategory(id)), [dispatch, id]);
 
+  const [isFilterVisible, setIsFilterVisible] = useState(false);
+
+  const handleFilterClick = () => {
+    setIsFilterVisible(!isFilterVisible);
+};
+
   const products_by_category = useSelector((state) => state.productsByCategory);
 
   console.log(products_by_category);
@@ -29,16 +35,15 @@ export default function ProductsByCategoriesPage() {
     <div className={s.container}>
       <div className={s.title_block}>
         <h1>{category_title?.title}</h1> 
-        <img src="/media/filter.svg" alt="" />
+        <img src="/media/filter.svg" alt="" onClick={handleFilterClick} className={s.filter}/>
       </div>
+    { isFilterVisible && (
       <div className={s.filter_mobile}>
-        <p>
-          <span>x</span>
-        </p>
         <FilterForm />
         <DiscountForm />
         <SortForm />
       </div>
+)}
       <div className={s.sort_container}>
         <FilterForm />
         <DiscountForm />

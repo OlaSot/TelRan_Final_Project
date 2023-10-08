@@ -8,7 +8,7 @@ export default function CartItem({ id, title, price, count, image, description, 
 
     const dispatch = useDispatch()
 
-    const currentPrice = (discont_price ?? price)
+
 
     return (
         <div className={s.container}>
@@ -23,7 +23,7 @@ export default function CartItem({ id, title, price, count, image, description, 
                     <p>{count}</p>
                     <button onClick={() => dispatch(incrementCountAction(id))}>+</button>
                 </div>
-                <p>{price * count}$</p>
+                <p>{(price * count).toFixed(2)}$</p>
                 
 
 

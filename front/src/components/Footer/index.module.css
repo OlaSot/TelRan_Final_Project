@@ -78,6 +78,23 @@
     
 }
 
+@media (max-width: 1080px) {
+    .number{
+        margin-top: 25px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+    .strasse{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    h1{
+        font-size: 30px;
+    }
+}
+
 @media(max-width: 900px){
     .number{
         margin-top: 25px;

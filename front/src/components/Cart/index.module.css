@@ -22,7 +22,7 @@
 
 .right_side{
     margin-top: 30px;
-    width: 30%;
+    width: 400px;
    
 }
 
@@ -47,4 +47,15 @@
     padding: 20px;
     border-radius: 30px;
     background-color: white;
+}
+
+.empty_cart{
+    display: flex;
+    align-items: center;
+    color: rgb(91, 95, 86);
+    gap: 100px;
+}
+
+.empty_cart h1{
+    font-size: 100px;
 }

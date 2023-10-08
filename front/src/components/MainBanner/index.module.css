@@ -117,14 +117,35 @@
 }
 
 
+@media(max-width: 1080px){
+    .image_sale{
+        width: 900px;
+    }
+    .sale_container h2 {
+        font-size: 60px;
+        margin-bottom: 10px;
+    } 
+       .sale_container h1{
+        font-size: 90px;
+        margin-bottom: 10px;
+
+    }
+    .sale_btn{
+        font-size: 100px;
+        margin-bottom: 40px;
+
+    }
+    
+
+}
+
 @media(max-width: 900px) {
 
     .image_sale{
         width: 700px;
-
     }
     .sale_container h2 {
-        margin-top: 25px;
+        margin-top: 55px;
         margin-bottom: 15px;
         margin-left: 50px;
 
@@ -151,12 +172,12 @@
 
 @media(max-width: 600px) {
     .image_sale {
-        width: 100%;  
+        width: 500px;  
     }
 
     .sale_container h2 {
         font-size: 30px;  
-        margin-top: 25px;
+        margin-top: 50px;
         margin-left: 20px;
     } 
 

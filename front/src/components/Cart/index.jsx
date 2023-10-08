@@ -8,7 +8,7 @@ import { sendOrder } from "../../requests/products_req";
 
 export default function Cart() {
   const cart_state = useSelector((state) => state.cart);
-  console.log(cart_state)
+  console.log(cart_state);
   const dispatch = useDispatch();
   const total = cart_state.reduce(
     (acc, { price, count }) => acc + price * count,
@@ -16,6 +16,8 @@ export default function Cart() {
   );
 
   const btn_text = "Order";
+
+  const empty_cart = '/media/plant.png'
 
   useEffect(() => {
     localStorage.setItem("prod_in_Cart", JSON.stringify(cart_state));
@@ -27,9 +29,14 @@ export default function Cart() {
 
       <div className={s.both_sides}>
         <div className={s.left_side}>
-          {cart_state.map((el) => (
-            <CartItem key={el.id} {...el} />
-          ))}
+          {cart_state.length === 0 ? (
+            <div className={s.empty_cart}>
+              <img src={empty_cart} alt="" />
+              <h1>Your cart is empty :(</h1>
+            </div>
+          ) : (
+            cart_state.map((el) => <CartItem key={el.id} {...el} />)
+          )}
         </div>
 
         <div className={s.right_side}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FormButton from "../FormButton";
 import FormInput from "../FormInput";
 import { useForm } from "react-hook-form";
@@ -21,22 +21,31 @@ export default function FormItem({ text, btn_style, input_style_sale, onSubmitFu
     }
   }) 
   
-
+  const [showModal, setShowModal] = useState(false);
   
   const submit = (data) => {
     dispatch(clearCartAction())
     onSubmitFunction(data)
     reset()
+    setShowModal(true)
   }
 
 
 
   return (
+    <div>
+      {showModal && (
+      <div className={s.modal}>
+        Successful order!
+        <button onClick={() => setShowModal(false)}>x</button>
+      </div>
+    )}
     <form onSubmit={handleSubmit(submit)}>
       <FormInput input_style={input_style_sale} type='tel' placeholder='+49' name='phone' 
       {...mobile_phone_register}/>
     {errors.phone && <p className={s.req_text}>{errors.phone.message}</p>}
       <FormButton btn_style={btn_style}>{text}</FormButton>
     </form>
+    </div>
   );
 }
