@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TelRan_Final_Project/static/css/main.76d2294e.css",
+    "main.js": "/TelRan_Final_Project/static/js/main.53bf9b02.js",
+    "static/media/Mesa de trabajo 1 copy.png": "/TelRan_Final_Project/static/media/Mesa de trabajo 1 copy.df6a3d1a55a6ac31fc38.png",
+    "static/media/darkBG.png": "/TelRan_Final_Project/static/media/darkBG.dee237991731475a5f5c.png",
+    "static/media/bridge.png": "/TelRan_Final_Project/static/media/bridge.2948928647523c6b8fa7.png",
+    "index.html": "/TelRan_Final_Project/index.html",
+    "main.76d2294e.css.map": "/TelRan_Final_Project/static/css/main.76d2294e.css.map",
+    "main.53bf9b02.js.map": "/TelRan_Final_Project/static/js/main.53bf9b02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76d2294e.css",
+    "static/js/main.53bf9b02.js"
+  ]
+}
