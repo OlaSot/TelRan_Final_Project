@@ -70,14 +70,14 @@
 @media(max-width: 1080px) {
 
   .img {
-    height: 170px;
-    width: 170px;
+    height: 200px;
+    width: 200px;
 
   }
 
   .square {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 
 }

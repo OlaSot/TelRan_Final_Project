@@ -37,7 +37,7 @@ function App() {
         <Route path='/categories' element={<AllCategoriesPage />} />
         <Route path='/products' element={<AllProductsPage />} />
         <Route path='/cart' element={<CartPage />} />
-        <Route path='/sales' element={<AllSales handleFilterClick={handleFilterClick}/>} />
+        <Route path='/sales' element={<AllSales handleFilterClick={handleFilterClick} isFilterVisible={isFilterVisible}/>} />
         <Route path='/categories/:id' element={<ProductsByCategoriesPage handleFilterClick={handleFilterClick} isFilterVisible={isFilterVisible}/>} />
         <Route path='/products/:id' element={<SingleProductPage isFilterVisible={isFilterVisible}/>} />
         <Route path='*' element={<NotFoundPage />} />

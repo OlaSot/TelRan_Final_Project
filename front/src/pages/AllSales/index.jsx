@@ -16,6 +16,8 @@ export default function AllSales({ handleFilterClick, isFilterVisible }) {
 
   // console.log(allSalesProducts);
 
+  console.log(isFilterVisible);
+
   return (
     <div className={s.container}>
       <div className={s.title_block}>

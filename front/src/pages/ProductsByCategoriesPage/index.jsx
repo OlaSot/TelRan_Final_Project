@@ -39,7 +39,7 @@ export default function ProductsByCategoriesPage({handleFilterClick, isFilterVis
         />
       </div>
       {isFilterVisible && (
-        <div className={s.filter_mobile}>
+        <div className={`${s.filter_mobile} ${isFilterVisible ? s.show : ""}`}>
           <FilterForm />
           <DiscountForm />
           <SortForm />

@@ -12,8 +12,9 @@ export default function ProductCard({
   discont_price,
   productsStyle,
 }) {
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
+  
   const saleCalculation = (price, discont_price) => {
     if (discont_price === null) {
       return 0;

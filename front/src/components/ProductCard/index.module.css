@@ -13,7 +13,6 @@
   position: relative;
 }
 
-
 .square {
   top: 50%;
   left: 50%;
@@ -52,7 +51,6 @@
 }
 
 .price_wrapper {
-
   width: 250px;
   margin: auto;
   display: flex;
@@ -95,11 +93,9 @@
 }
 
 .not_changed_price {
-
   font-size: 30px;
   font-weight: 600;
   color: #575959;
-
 }
 
 @media(max-width: 1600px) {
@@ -107,9 +103,7 @@
   .img {
     height: 250px;
     width: 250px;
-
   }
-
   .square {
     width: 270px;
     height: 270px;
@@ -118,18 +112,16 @@
 }
 
 
-
 @media(max-width: 1080px) {
 
   .img {
-    height: 180px;
-    width: 180px;
-
+    height: 200px;
+    width: 200px;
   }
 
   .square {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 
 }
@@ -147,18 +139,17 @@
   }
 
   .img {
-    height: 170px;
-    width: 170px;
+    height: 200px;
+    width: 200px;
 
   }
 
   .square {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 
   .price_wrapper {
-
     gap: 5px;
   }
 
