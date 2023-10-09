@@ -1,44 +1,51 @@
-.container{
+.container {
     margin: 100px auto;
     max-width: 1600px;
     width: 80%;
     position: relative;
 }
 
-h1{
+h1 {
     font-size: 40px;
     font-weight: bold;
 }
 
 
 
-.sort_container{
+.sort_container {
     margin: 80px 0 45px 0;
     display: flex;
     gap: 40px;
 }
 
-.filter_mobile{
+.filter_mobile {
     display: none;
 }
 
-.filter{
+.filter {
     display: none;
 }
 
-@media(max-width: 900px){
-
-    .sort_container{
+@media(max-width: 900px) {
+    .container{
+        width: 90%;
+    }
+    .sort_container {
         display: none;
     }
-    .container img{
+    
+    .container img {
         width: 20px;
     }
-    .title_block{
+
+    .title_block {
         display: flex;
         justify-content: space-between;
     }
-    .filter_mobile{
+    .filter{
+        display: block;
+    }
+    .filter_mobile {
         width: 100%;
         height: auto;
         display: flex;

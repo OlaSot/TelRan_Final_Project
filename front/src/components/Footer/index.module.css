@@ -1,5 +1,4 @@
-
-.wrapper{
+.wrapper {
     color: #575959;
     margin: 50px auto;
     width: 80%;
@@ -7,40 +6,40 @@
 
 }
 
-.text_container{
+.text_container {
     display: flex;
     justify-content: space-between;
 }
 
 
 
-.number{
+.number {
     margin-top: 25px;
     font-weight: 500;
     font-size: 70px;
 }
 
-.strasse{
+.strasse {
     font-size: 40px;
     font-weight: 500;
 }
 
-.address > p:first-of-type{
+.address>p:first-of-type {
     margin-top: 25px;
 }
 
-.hours{
+.hours {
     margin-top: 20px;
     font-size: 18px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
-.duration{
+.duration {
     font-size: 24px;
     font-weight: 600;
 }
 
-.content_cont{
+.content_cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,24 +48,24 @@
 
 
 
-.content_cont img{
+.content_cont img {
     width: 70px;
     height: 58px;
     margin-bottom: 8px;
 }
 
-.social_media_content{
+.social_media_content {
     display: flex;
     gap: 35px;
     margin-top: 33px;
 }
 
-.content_cont p{
+.content_cont p {
     font-size: 15px;
     font-weight: 600;
 }
 
-.map{
+.map {
     margin-top: 50px;
     width: 100%;
 }
@@ -75,82 +74,89 @@
     text-decoration: none;
     color: black;
     font-weight: medium;
-    
+
 }
 
 @media (max-width: 1080px) {
-    .number{
+    .number {
         margin-top: 25px;
         font-weight: 500;
         font-size: 25px;
     }
-    
-    .strasse{
+
+    .strasse {
         font-size: 25px;
         font-weight: 500;
     }
-    
-    h1{
+
+    h1 {
         font-size: 30px;
     }
 }
 
-@media(max-width: 900px){
-    .number{
+@media(max-width: 900px) {
+    .number {
         margin-top: 25px;
         font-weight: 500;
         font-size: 25px;
     }
-    
-    .strasse{
+
+    .strasse {
         font-size: 25px;
         font-weight: 500;
     }
-    
-    h1{
+
+    h1 {
         font-size: 30px;
     }
 
-    .map{
+    .map {
         display: none;
     }
+    
 
 }
+
 @media(max-width: 600px) {
     .wrapper {
-        width: 95%; /* Увеличим ширину контейнера на мобильных экранах для лучшего использования пространства */
+        width: 95%;
     }
 
     .text_container {
-        justify-content: space-evenly; /* Распределим контент равномерно */
+        justify-content: space-evenly;
     }
 
-    .contact_container, .address {
-        width: 45%; /* Установим ширину блоков, чтобы они были немного узче */
+    .contact_container,
+    .address {
+        width: 45%;
     }
 
-    .number, .strasse, h1 {
-        font-size: 24px; /* Уменьшим размер шрифта для номера, адреса и заголовка */
+    .number,
+    .strasse,
+    h1 {
+        font-size: 24px;
     }
+    .number, .strasse{
+        font-size: 20px;
+    }
+
 
     .hours {
-        font-size: 16px; /* Уменьшим размер шрифта для рабочих часов */
+        font-size: 16px;
     }
 
     .duration {
-        font-size: 18px; /* Уменьшим размер шрифта для продолжительности работы */
+        font-size: 18px;
     }
 
     .content_cont img {
-        width: 50px; /* Уменьшим размер иконок социальных сетей */
+        width: 50px;
         height: 42px;
     }
 
     .social_media_content {
-        gap: 20px; /* Уменьшим промежуток между иконками социальных сетей */
+        gap: 20px;
     }
 
-    .content_cont p {
-        font-size: 13px; /* Уменьшим размер шрифта под иконками социальных сетей */
-    }
+
 }

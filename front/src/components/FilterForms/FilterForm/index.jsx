@@ -9,7 +9,7 @@ export default function FilterForm() {
   const [maxValue, setMaxValue] = useState(Infinity);
 
   const dispatch = useDispatch();
-  
+
   const handleChange = (min, max) => {
     console.log(min, max);
     dispatch(filterProductAction({ minValue: min, maxValue: max }));
@@ -18,18 +18,17 @@ export default function FilterForm() {
 
   const handleMinValueChange = (e) => {
     let value = +e.target.value || 0;
-    if(value < 0) value = 0;
+    if (value < 0) value = 0;
     setMinValue(value);
     handleChange(value, maxValue);
   };
 
   const handleMaxValueChange = (e) => {
     let value = +e.target.value || Infinity;
-    if(value < 0) value = 0;
+    if (value < 0) value = 0;
     setMaxValue(value);
     handleChange(minValue, value);
   };
-
 
   return (
     <form className={s.price}>
@@ -49,4 +48,3 @@ export default function FilterForm() {
     </form>
   );
 }
-

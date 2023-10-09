@@ -3,7 +3,6 @@ import s from "./index.module.css";
 import FormItem from "../FormItem";
 import { getSale } from "../../requests/products_req";
 
-
 export default function SaleBanner({ text }) {
   return (
     <div className={s.dwarf_wrapper}>

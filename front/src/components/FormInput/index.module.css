@@ -1,4 +1,4 @@
-.input_main_page{
+.input_main_page {
     width: 473px;
     height: 75px;
     border: none;
@@ -19,7 +19,7 @@
 }
 
 
-.input_cart_page{
+.input_cart_page {
     width: 250px;
     height: 60px;
     border: none;
@@ -34,12 +34,10 @@
 
 }
 
-@media(max-width: 600px){
-    .input_main_page{
+@media(max-width: 600px) {
+    .input_main_page {
         width: 400px;
         height: 60px;
         font-size: 30px;
     }
 }
-
-

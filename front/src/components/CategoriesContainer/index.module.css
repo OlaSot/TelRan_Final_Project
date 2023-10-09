@@ -1,4 +1,4 @@
-.all_categories{
+.all_categories {
     margin-top: 80px;
     margin-bottom: 90px;
     display: grid;
@@ -11,7 +11,7 @@
 @media(max-width: 1400px) {
 
 
-    .all_categories{
+    .all_categories {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -20,13 +20,14 @@
 
 
 @media(max-width: 1080px) {
-    .main_container{
-        width: 80%;
+    .main_container {
+        width: 90%;
     }
 
-    .all_categories{
+    .all_categories {
         margin-top: 20px;
         grid-template-columns: repeat(2, 1fr);
+        
     }
 
 

@@ -1,8 +1,33 @@
-.container{
+.container {
     width: 100%;
-    background-color: aqua;
+    background-color: white;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
 }
-.main{
-    width: 20px;
-    color: aqua;
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: block;
+    }
+}
+
+.container img {
+    width: 30px;
+}
+
+.links {
+
+    padding: 12px 40px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

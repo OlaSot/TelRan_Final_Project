@@ -8,25 +8,21 @@ import FilterForm from "../../components/FilterForms/FilterForm";
 import DiscountForm from "../../components/FilterForms/DiscountForm";
 import SortForm from "../../components/FilterForms/SortForm";
 
-export default function ProductsByCategoriesPage() {
+export default function ProductsByCategoriesPage({handleFilterClick, isFilterVisible}) {
   const { id } = useParams();
 
   const dispatch = useDispatch();
 
   useEffect(() => dispatch(getProductsByCategory(id)), [dispatch, id]);
 
-  const [isFilterVisible, setIsFilterVisible] = useState(false);
 
-  const handleFilterClick = () => {
-    setIsFilterVisible(!isFilterVisible);
-};
 
   const products_by_category = useSelector((state) => state.productsByCategory);
 
   console.log(products_by_category);
 
   const products = products_by_category?.data || [];
-  
+
   // const new_products = products.map(el => ({...el, show_product: true }));
   // console.log(new_products)
   const category_title = products_by_category.category;
@@ -34,16 +30,21 @@ export default function ProductsByCategoriesPage() {
   return (
     <div className={s.container}>
       <div className={s.title_block}>
-        <h1>{category_title?.title}</h1> 
-        <img src="/media/filter.svg" alt="" onClick={handleFilterClick} className={s.filter}/>
+        <h1>{category_title?.title}</h1>
+        <img
+          src="/media/filter.svg"
+          alt=""
+          onClick={handleFilterClick}
+          className={s.filter}
+        />
       </div>
-    { isFilterVisible && (
-      <div className={s.filter_mobile}>
-        <FilterForm />
-        <DiscountForm />
-        <SortForm />
-      </div>
-)}
+      {isFilterVisible && (
+        <div className={s.filter_mobile}>
+          <FilterForm />
+          <DiscountForm />
+          <SortForm />
+        </div>
+      )}
       <div className={s.sort_container}>
         <FilterForm />
         <DiscountForm />

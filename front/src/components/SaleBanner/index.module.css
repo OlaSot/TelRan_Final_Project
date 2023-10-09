@@ -7,11 +7,11 @@
     position: relative;
 }
 
-.hand_container{
+.hand_container {
     display: none;
 }
 
-.percent_img{
+.percent_img {
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -41,40 +41,47 @@
 }
 
 
- @media(max-width: 900px) {
-    .dwarf_wrapper{
+@media(max-width: 900px) {
+    .dwarf_wrapper {
         background-color: #F2F4E4;
     }
+
     .discount_descr h1 {
         margin-top: 15px;
         font-size: 80px;
     }
-    .discount_descr h2{
+
+    .discount_descr h2 {
         font-size: 60px;
     }
-    .dwarf_wrapper{
+
+    .dwarf_wrapper {
         height: 400px;
         width: 100%;
     }
-    .percent_img{
+
+    .percent_img {
         display: none;
     }
 
 
 }
+
 @media(max-width: 600px) {
     .dwarf_wrapper {
-        height: 300px; /* Уменьшим высоту блока */
+        height: 300px;
+
     }
 
     .discount_descr h1 {
         margin-top: 10px;
-        font-size: 60px; /* Уменьшим размер шрифта для h1 */
+        font-size: 60px;
+
     }
 
     .discount_descr h2 {
         margin-top: -10px;
-        font-size: 40px; /* Уменьшим размер шрифта для h2 */
+        font-size: 40px;
+
     }
 }
-

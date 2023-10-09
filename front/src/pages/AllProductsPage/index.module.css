@@ -1,11 +1,11 @@
-.container{
+.container {
     margin: 100px auto;
     width: 80%;
     max-width: 1600px;
 
 }
 
-.sort_container{
+.sort_container {
     margin: 80px 0 45px 0;
     display: flex;
     gap: 40px;
@@ -13,8 +13,11 @@
 
 
 
-@media(max-width: 900px){
-    .sort_container{
+@media(max-width: 900px) {
+    .container{
+        width: 90%;
+    }
+    .sort_container {
         display: none;
     }
 }

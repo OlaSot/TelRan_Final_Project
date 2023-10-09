@@ -35,7 +35,7 @@
 
 
 @media(max-width: 1400px) {
-    .btn_cat{
+    .btn_cat {
         width: 200px;
         height: 55px;
         font-size: 24px;
@@ -45,11 +45,11 @@
 }
 
 @media(max-width: 1080px) {
-    .main_container{
+    .main_container {
         width: 80%;
     }
 
-    .all_categories{
+    .all_categories {
         margin-top: 20px;
     }
 }
@@ -57,13 +57,11 @@
 
 
 @media(max-width: 900px) {
-    .main_container{
+    .main_container {
         width: 80%;
     }
 
-    .all_categories{
+    .all_categories {
         margin-top: 20px;
     }
 }
-
-

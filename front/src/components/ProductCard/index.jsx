@@ -53,9 +53,9 @@ export default function ProductCard({
         <div className={s.price_wrapper}>
           {discont_price ? (
             <>
-            <p className={s.old_price}>{price}$</p>
-            <p className={s.new_price}>{discont_price}$</p>
-            <p className={s.discount}>-{sale}%</p>
+              <p className={s.old_price}>{price}$</p>
+              <p className={s.new_price}>{discont_price}$</p>
+              <p className={s.discount}>-{sale}%</p>
             </>
           ) : (
             <p className={s.new_price}>{price}$</p>

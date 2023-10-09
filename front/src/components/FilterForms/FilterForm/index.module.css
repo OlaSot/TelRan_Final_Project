@@ -1,4 +1,4 @@
-.title{
+.title {
     font-size: 20px;
     font-weight: 600;
 }
@@ -9,10 +9,10 @@
     align-items: center;
 }
 
-.price input{
+.price input {
     width: 100px;
     height: 42px;
     color: #ACACAC;
     padding: 10px;
-    border-radius: 7px; 
+    border-radius: 7px;
 }

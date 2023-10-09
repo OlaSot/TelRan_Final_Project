@@ -7,7 +7,8 @@
     justify-content: center;
 
 }
-.image_sale{
+
+.image_sale {
 
     width: 1400px;
     height: auto;
@@ -21,6 +22,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .links {
     text-decoration: none;
 }
@@ -62,7 +64,7 @@
     color: #737F49;
     font-size: 8.75em;
     text-transform: uppercase;
-    
+
 
 }
 
@@ -79,37 +81,43 @@
 
 @media(max-width: 1920px) {
 
-    .image_sale{
+    .image_sale {
         width: 1200px;
 
     }
+
     .sale_container h2 {
         font-size: 70px;
-    } 
-       .sale_container h1{
+    }
+
+    .sale_container h1 {
         font-size: 130px;
     }
-    .sale_btn{
+
+    .sale_btn {
         font-size: 130px;
     }
 }
 
 @media(max-width: 1400px) {
 
-    .image_sale{
+    .image_sale {
         width: 1000px;
 
     }
+
     .sale_container h2 {
         font-size: 60px;
         margin-bottom: 20px;
-    } 
-       .sale_container h1{
+    }
+
+    .sale_container h1 {
         font-size: 100px;
         margin-bottom: 20px;
 
     }
-    .sale_btn{
+
+    .sale_btn {
         font-size: 100px;
         margin-bottom: 20px;
 
@@ -117,52 +125,58 @@
 }
 
 
-@media(max-width: 1080px){
-    .image_sale{
+@media(max-width: 1080px) {
+    .image_sale {
         width: 900px;
     }
+
     .sale_container h2 {
         font-size: 60px;
         margin-bottom: 10px;
-    } 
-       .sale_container h1{
+    }
+
+    .sale_container h1 {
         font-size: 90px;
         margin-bottom: 10px;
 
     }
-    .sale_btn{
+
+    .sale_btn {
         font-size: 100px;
         margin-bottom: 40px;
 
     }
-    
+
 
 }
 
 @media(max-width: 900px) {
 
-    .image_sale{
+    .image_sale {
         width: 700px;
     }
+
     .sale_container h2 {
         margin-top: 55px;
         margin-bottom: 15px;
         margin-left: 50px;
 
         font-size: 50px;
-    } 
-       .sale_container h1{
+    }
+
+    .sale_container h1 {
         margin-bottom: 20px;
         font-size: 70px;
         margin-left: 50px;
     }
-    .sale_btn{
+
+    .sale_btn {
         font-size: 70px;
         margin-left: 50px;
 
     }
 
-    .text{
+    .text {
         width: 70%;
         display: flex;
         align-items: ceter;
@@ -172,29 +186,29 @@
 
 @media(max-width: 600px) {
     .image_sale {
-        width: 500px;  
+        width: 500px;
     }
 
     .sale_container h2 {
-        font-size: 30px;  
+        font-size: 30px;
         margin-top: 50px;
         margin-left: 20px;
-    } 
+    }
 
     .sale_container h1 {
-        font-size: 40px;  
+        font-size: 40px;
         margin-left: 20px;
         margin-top: -25px;
     }
 
     .sale_btn {
-        font-size: 40px;  
+        font-size: 40px;
         margin-left: 20px;
         margin-top: -30px;
     }
 
     .text {
-        width: 90%; 
+        width: 90%;
         align-items: center;
     }
 }

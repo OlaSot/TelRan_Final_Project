@@ -1,4 +1,4 @@
-.title{
+.title {
     font-size: 30px;
     font-weight: 600;
     margin-top: 20px;
@@ -6,31 +6,31 @@
 
 }
 
-.product_container{
+.product_container {
     margin: 50px auto;
     width: 80%;
     max-width: 1600px;
 }
 
-.prices{
+.prices {
     font-size: 70px;
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
     height: 700px;
     align-items: center;
 }
 
-.image{
+.image {
     width: 500px;
     height: 500px;
     border-radius: 20px;
     position: relative;
 }
 
-.discount_price{
+.discount_price {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@
 
 }
 
-.discount_price p:first-child{
+.discount_price p:first-child {
     font-size: 70px;
     color: #575959;
 
@@ -49,15 +49,15 @@
     text-decoration: line-through;
 }
 
-.discount_price p:last-child{
+.discount_price p:last-child {
     font-size: 28px;
     color: #da3f3f;
     font-weight: 600;
-    
+
 }
 
-.button{
-    
+.button {
+
     width: 276px;
     height: 53px;
     background-size: cover;
@@ -86,7 +86,7 @@
 .button:hover .button_img {
     width: 300px;
     height: 51px;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out ;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .button p {
@@ -96,87 +96,87 @@
 
 
 
-.description{
+.description {
     font-size: 20px;
     margin-top: 50px;
     text-align: justify;
     color: #575959;
-    
+
 }
 
-.right_side{
+.right_side {
     padding: 5%;
 }
 
-.description p:last-child{
+.description p:last-child {
     margin-top: 20px;
 }
 
-.square{
+.square {
 
     display: flex;
     align-items: center;
     padding: 15px;
     border: 4px solid #D3D17D;
     border-radius: 20px;
-    
-  } 
 
-  @media(max-width: 900px) {
+}
 
-    .product_container{
+@media(max-width: 900px) {
+
+    .product_container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 95%; /* Увеличим ширину контейнера, чтобы использовать больше пространства экрана */
+        width: 95%;
     }
 
-    .title{
-        font-size: 24px; /* Уменьшим размер заголовка */
-        margin-top: 15px; /* Уменьшим верхний отступ заголовка */
+    .title {
+        font-size: 24px;
+        margin-top: 15px;
         margin-bottom: 40px;
     }
 
     .container {
-        flex-direction: column; /* Переключим направление флекса на колонку, чтобы контент шел сверху вниз */
-        height: auto; /* Уберем жесткую высоту */
-        align-items: center; /* Выравнивание по начальной линии */
+        flex-direction: column;
+        height: auto;
+        align-items: center;
     }
 
     .square {
-        margin-bottom: 20px; /* Добавим нижний отступ для картинки */
+        margin-bottom: 20px;
     }
 
     .image {
-        width: 400px; /* Уменьшим размер изображения */
+        width: 400px;
         height: 400px;
     }
 
     .prices {
-        font-size: 50px; /* Уменьшим размер шрифта цены */
+        font-size: 50px;
     }
 
-    .discount_price p:first-child{
-        font-size: 50px; /* Уменьшим размер шрифта для скидочной цены */
+    .discount_price p:first-child {
+        font-size: 50px;
     }
 
     .discount_price p:nth-child(2) {
-        font-size: 16px; /* Уменьшим размер шрифта для обычной цены */
+        font-size: 16px;
     }
 
-    .discount_price p:last-child{
-        font-size: 22px; /* Уменьшим размер шрифта для процентов скидки */
+    .discount_price p:last-child {
+        font-size: 22px;
     }
 
     .button {
-        width: 200px; /* Уменьшим размер кнопки */
+        width: 200px;
         height: 40px;
-        margin: 30px auto; /* Уменьшим отступы кнопки */
-        font-size: 24px; /* Уменьшим размер шрифта в кнопке */
+        margin: 30px auto;
+        font-size: 24px;
     }
 
     .button_img {
-        width: 180px; /* Уменьшим размер изображения в кнопке */
+        width: 180px;
         height: 32px;
     }
 
@@ -185,24 +185,24 @@
         height: 40px;
     }
 
-    .description{
-        font-size: 18px; /* Уменьшим размер шрифта описания */
-        margin-top: 30px; /* Уменьшим верхний отступ описания */
+    .description {
+        font-size: 18px;
+        margin-top: 30px;
     }
 
     .right_side {
-        padding: 3%; /* Уменьшим отступы справа */
+        padding: 3%;
     }
 
-    .description p:last-child{
-        margin-top: 15px; /* Уменьшим верхний отступ последнего параграфа в описании */
+    .description p:last-child {
+        margin-top: 15px;
     }
 
 }
 
 @media(max-width: 600px) {
-    .image{
-        width: 300px; /* Уменьшим размер изображения */
+    .image {
+        width: 300px;
         height: 300px;
     }
 }

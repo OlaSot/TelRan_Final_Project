@@ -1,33 +1,29 @@
-.img{
+.img {
     width: 192px;
     height: 166px;
     object-fit: cover;
     border-radius: 20px;
 }
 
-.left_side{
+.left_side {
 
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(5, 1fr);
-    justify-items: center; /* выравнивание элементов по горизонтали по центру */
+    justify-items: center;
     align-items: center;
 }
 
-.container{
+.container {
     display: flex;
     background-color: white;
     border-radius: 20px;
     margin-right: 40px;
     padding: 20px;
-    
+
 }
 
-
-
-
-
-.btns_container{
+.btns_container {
     display: flex;
     font-size: 22px;
     width: 100px;
@@ -46,3 +42,47 @@
     outline: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .left_side {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+      position: relative;
+    }
+  
+    .img {
+      width: 150px;
+      height: 130px;
+    }
+  
+    .text_block p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  
+    .btns_container {
+      margin-top: 10px;
+    }
+  
+    .btns_container p {
+      font-size: 18px;
+    }
+  
+    .btns_container button {
+      font-size: 20px;
+    }
+
+    .delete_btn{
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+  }
