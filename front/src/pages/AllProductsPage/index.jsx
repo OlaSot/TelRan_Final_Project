@@ -7,7 +7,10 @@ import SortForm from "../../components/FilterForms/SortForm";
 import FilterForm from "../../components/FilterForms/FilterForm";
 import DiscountForm from "../../components/FilterForms/DiscountForm";
 
-export default function AllProductsPage() {
+export default function AllProductsPage({
+  isFilterVisible,
+  handleFilterClick,
+}) {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +22,20 @@ export default function AllProductsPage() {
 
   return (
     <div className={s.container}>
-      <h1>All products</h1>
+      <div className={s.title_block}>
+        <h1>All products</h1>
+        <img
+          src="/media/filter.svg"
+          alt="filter"
+          onClick={handleFilterClick}
+          className={s.filter}
+        />
+      </div>
+      <div className={`${s.filter_mobile} ${isFilterVisible ? s.show : ""}`}>
+        <FilterForm />
+        <DiscountForm />
+        <SortForm />
+      </div>
       <div className={s.sort_container}>
         <FilterForm />
         <DiscountForm />

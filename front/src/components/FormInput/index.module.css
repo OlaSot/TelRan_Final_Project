@@ -41,3 +41,11 @@
         font-size: 30px;
     }
 }
+
+@media(max-width: 375px) {
+    .input_main_page {
+        width: 350px;
+        height: 60px;
+        font-size: 30px;
+    }
+}

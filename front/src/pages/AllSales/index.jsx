@@ -24,17 +24,15 @@ export default function AllSales({ handleFilterClick, isFilterVisible }) {
         <h1>Sale</h1>
         <img
           src="/media/filter.svg"
-          alt=""
+          alt="filter"
           onClick={handleFilterClick}
           className={s.filter}
         />
       </div>
-      {isFilterVisible && (
-        <div className={s.filter_mobile}>
-          <FilterForm />
-          <SortForm />
-        </div>
-      )}
+      <div className={`${s.filter_mobile} ${isFilterVisible ? s.show : ''}`}>
+        <FilterForm />
+        <SortForm />
+      </div>
       <div className={s.sort_container}>
         <FilterForm />
         <SortForm />

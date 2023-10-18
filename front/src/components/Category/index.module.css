@@ -81,3 +81,31 @@
   }
 
 }
+
+
+@media(max-width: 600px) {
+.img {
+  height: 170px;
+  width: 170px;
+
+}
+
+.square {
+  width: 210px;
+  height: 210px;
+}
+}
+
+@media(max-width: 375px) {
+
+  .img {
+      height: 150px;
+      width: 150px;
+  }
+
+  .square {
+      width: 160px;
+      height: 160px;
+      border-width: 2px; 
+  }
+}

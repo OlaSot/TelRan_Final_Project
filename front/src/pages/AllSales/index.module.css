@@ -23,6 +23,7 @@
 @media(max-width: 900px) {
     .container{
         width: 90%;
+        position: relative;
     }
     .sort_container {
         display: none;

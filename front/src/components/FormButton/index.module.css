@@ -54,3 +54,11 @@
         font-size: 30px;
     }
 }
+
+@media(max-width: 375px) {
+    .main_page_btn {
+        width: 350px;
+        height: 60px;
+        font-size: 30px;
+    }
+}

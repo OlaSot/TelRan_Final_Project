@@ -25,11 +25,13 @@ export const getOneProduct = (id) => {
     return dispatch => {
         fetch(`http://localhost:3333/products/${id}`)
         .then(res => res.json())
-        .then(json => {dispatch(loadOneProductAction(json[0]))})
+        .then(json => {
+            console.log(json);
+            dispatch(loadOneProductAction(json[0])
+            )
+        })
     }
 }
-
-
 
 
 
